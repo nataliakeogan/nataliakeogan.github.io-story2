@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+{
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats)*/
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+  color: black;
+  background-color: white;
+  font-family: 'Noto Serif SC', serif; /* font */
+  font-size: 16px; /* 16px is the standard font size */
+  line-height: 1.5; /* 1.5 times the size of the font */
+}
+
+a { color: #9b2222;
+text-decoration: underline;
+}
+
+a:hover { color: #fcd032;
+text-decoration: none;
+}
+
+/* Header */
+header {
+  background-color: #9b2222; /*green*/
+  color: white;
+  text-align: center; /* align all text inside header to the center*/
+}
+
+/*header h1 story title*/
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 40px 40px 20px 40px;/*Top, right, bottom, left */
+}
+
+/*header h2 lead*/
+h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  padding: 0px 20px;/* Top and bottom 0px of padding, right and left 20px of padding*/
+  margin: 0px 80px;/* Top and bottom 0px of margin, right and left 60px of margin*/
+}
+
+/*byline*/
+#author {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 40px;/* add 40px of padding space in the bottom of byline*/
+}
+
+/*byline link*/
+#author a {
+  color: white;
+  text-decoration: none;
+}
+
+/*a:hover byline link on hover*/
+#author a:hover {
+  color: #9b2222
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+article {
+  max-width: 700px;/*set the width of the text and other elements inside the article tag*/
+  padding: 20px;/*give it padding all around*/
+  margin: auto;
+
+}
+
+
+/*I am using h2 for subtitles*/
+h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  }
+
+
+/* Image, figure and figcaption styles from general to specific */
+
+figure {
+  display: block;
+  /* in this way it fills the width of the parent element article */
+  margin: 0px;
+  /* no margin to avoid extra space around the element */
+}
+
+/*give images a max-width of 100%*/
+img {
+  max-width: 100%;
+  height: auto;
+  /* adjust the height of image to the max-width */
+}
+
+/*figcaption inherits font size from global styles*/
+figcaption {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.1;
+  padding: 2px 2px;
+}
+
+/*div container for the 3 images and captions, using the class .img-wrapper*/
+.img-wrapper {
+  display: flex;
+  flex-direction: row; /*align in the same row*/
+  justify-content: space-between;
+}
+
+.img-wrapper figure {width: 200px;}/*give the caption text a width of 200 px to make sure is the same width of the image*/
+
+/* Blockquotes */
+
+blockquote {
+  border-top: 6px solid #9b2222;/*burgundy top border line of 6px*/
+  border-bottom: 2px solid #9b2222;/*burgundy bottom border line of 2px*/
+  color: #000000;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+}
+
+footer {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding: 20px 0px 20px 0px; /* Top, right, bottom, left */
+  width: 100%;/*Make navigation 100% width of the viewport*/
+  /*height: 100px;Give footer 200px of height*/
+}
+
+/*Footer list of links aligned horizontal*/
+footer ul li {
+  display: inline;
+  /*top right bottom left or give it 0px of top space, 10 px to
+    the right, 0px to the bottom and 10px to the left.*/
+}
